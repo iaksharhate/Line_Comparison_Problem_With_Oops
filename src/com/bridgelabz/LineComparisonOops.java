@@ -40,4 +40,23 @@ public class LineComparisonOops {
             System.out.println("Both lines are not equal");
         }
     }
+
+    public void compareTwoLines(){
+        double firstLineLength;
+        double secondLineLength;
+
+        System.out.println("Enter coordinates for first line: ");
+        firstLineLength = calculateLineLength();
+
+        System.out.println("Enter coordinates for second line: ");
+        secondLineLength = calculateLineLength();
+
+        if (firstLineLength == secondLineLength){
+            System.out.println("Both lines are equal");
+        }else if(firstLineLength > secondLineLength){
+            System.out.println("First Line is greater that second line.");
+        }else{
+            System.out.println("Second Line is greater that first line.");
+        }
+    }
 }
