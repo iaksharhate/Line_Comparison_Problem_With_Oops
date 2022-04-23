@@ -23,4 +23,21 @@ public class LineComparisonOops {
                 "(" + x2 + "," + y2 + ") = " + length);
         return length;
     }
+
+    public void qualityOfLines(){
+        double firstLineLength;
+        double secondLineLength;
+
+        System.out.println("Enter coordinates for first line: ");
+        firstLineLength = calculateLineLength();
+
+        System.out.println("Enter coordinates for second line: ");
+        secondLineLength = calculateLineLength();
+
+        if (firstLineLength == secondLineLength){
+            System.out.println("Both lines are equal");
+        }else{
+            System.out.println("Both lines are not equal");
+        }
+    }
 }
