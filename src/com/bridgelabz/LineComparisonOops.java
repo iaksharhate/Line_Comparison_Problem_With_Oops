@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class LineComparisonOops {
 
+    static String strLength1;
+    static String strLength2;
+
     public double calculateLineLength(){
         int x1, x2, y1, y2;
 
@@ -25,38 +28,23 @@ public class LineComparisonOops {
     }
 
     public void qualityOfLines(){
-        double firstLineLength;
-        double secondLineLength;
-
         System.out.println("Enter coordinates for first line: ");
-        firstLineLength = calculateLineLength();
+        strLength1 = Double.toString(calculateLineLength());
 
         System.out.println("Enter coordinates for second line: ");
-        secondLineLength = calculateLineLength();
+        strLength2 = Double.toString(calculateLineLength());
 
-        if (firstLineLength == secondLineLength){
-            System.out.println("Both lines are equal");
-        }else{
-            System.out.println("Both lines are not equal");
-        }
+        System.out.println(strLength1.equals(strLength2));
     }
 
     public void compareTwoLines(){
-        double firstLineLength;
-        double secondLineLength;
 
         System.out.println("Enter coordinates for first line: ");
-        firstLineLength = calculateLineLength();
+        strLength1 = Double.toString(calculateLineLength());
 
         System.out.println("Enter coordinates for second line: ");
-        secondLineLength = calculateLineLength();
+        strLength2 = Double.toString(calculateLineLength());
 
-        if (firstLineLength == secondLineLength){
-            System.out.println("Both lines are equal");
-        }else if(firstLineLength > secondLineLength){
-            System.out.println("First Line is greater that second line.");
-        }else{
-            System.out.println("Second Line is greater that first line.");
-        }
+        System.out.println(strLength1.compareTo(strLength2));
     }
 }
